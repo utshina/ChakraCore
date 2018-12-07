@@ -97,6 +97,8 @@ enum IRDumpFlags
     IRDumpFlags_SkipEndLine = 0x4,
     IRDumpFlags_SkipByteCodeOffset = 0x8,
 };
+
+extern CriticalSection DumpCs;
 #endif
 
 //

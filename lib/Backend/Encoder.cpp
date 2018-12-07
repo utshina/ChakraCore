@@ -18,6 +18,9 @@
 void
 Encoder::Encode()
 {
+#if DBG_DUMP
+    AutoCriticalSection autocs(&DumpCs);
+#endif
     NoRecoverMemoryArenaAllocator localArena(_u("BE-Encoder"), m_func->m_alloc->GetPageAllocator(), Js::Throw::OutOfMemory);
     m_tempAlloc = &localArena;
 

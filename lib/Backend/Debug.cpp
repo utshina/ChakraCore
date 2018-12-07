@@ -12,6 +12,7 @@
 
 #if DBG_DUMP
 
+CriticalSection DumpCs;
 Func *CurrentFunc;
 
 ///----------------------------------------------------------------------------

@@ -2102,6 +2102,7 @@ Func::DumpHeader()
 void
 Func::Dump(IRDumpFlags flags)
 {
+    AutoCriticalSection autocs(&DumpCs);
     this->DumpHeader();
 
     FOREACH_INSTR_IN_FUNC(instr, this)
